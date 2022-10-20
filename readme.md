@@ -17,7 +17,7 @@ soapClient = SoapClient( os.environ.get('ECONOMIC_TOKEN'), os.environ.get('ECONO
 
 ## Endpoint integrations
 
-### Subscriber
+### Subscriber `SOAP`
 | Field | Type | Required | Description |
 |--|--|--|--|
 | DebtorId | Number | `Required` | Customer id |
@@ -44,6 +44,7 @@ pprint( get.toObject() )
 ```
 
 `POST` /Subscriber
+
 It is possible to use all fields above
 
 ````python
@@ -59,8 +60,3 @@ subscriber = Subscriber(DebtorId, SubscriptionId, StartDate, RegisteredDate, End
 create = SubscriberModel( soapClient ).create( subscriber )
 pprint( "We have added a subscriber", create.toObject() )
 ````
-
-### Subscriber
-|asda	dasas  |asdasd  |
-|--|--|
-|  |  |
