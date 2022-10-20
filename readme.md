@@ -1,5 +1,15 @@
 # Python integration to e-conomic.com 
 
+## Setup
+1. Duplicate `.env.template` and change to `.env`
+2. Insert `token` and `appToken`
+
+## Where to find e-conomic tokens?
+1. Sign up as [E-conomic Developer](https://www.e-conomic.com/developer)
+2. Create an E-conomic app (it is not needed to be approved)
+3. Use the authentication link when logged into your normal e-conomic account
+4. On redirect - you get the token in GET request
+
 ## Authentication and init
 ````python
 soapClient = SoapClient( os.environ.get('ECONOMIC_TOKEN'), os.environ.get('ECONOMIC_APPTOKEN') )
@@ -9,6 +19,7 @@ soapClient = SoapClient( os.environ.get('ECONOMIC_TOKEN'), os.environ.get('ECONO
 
 ### Subscriber
 | Field | Type | Required | Description |
+|--|--|--|--|
 | DebtorId | Number | `Required` | Customer id |
 | SubscriptionId | Number | `Required` | The subscription |
 | StartDate | DateTime | `Required` | Start date of the Subscriber |
